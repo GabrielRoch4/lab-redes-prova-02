@@ -1,0 +1,285 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #E0E0E0; /* Texto claro */
+  margin: 0;
+  overflow-x: hidden; /* Remove scroll horizontal */
+}
+
+/* Header */
+header {
+  background: linear-gradient(45deg, #1F1F1F, #333);
+  color: #E0E0E0;
+  text-align: center;
+  padding: 50px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1.5s ease;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #9E9E9E;
+}
+
+/* Navbar */
+nav {
+  background: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 15px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #E0E0E0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: color 0.3s, background 0.3s;
+}
+
+nav ul li a:hover {
+  color: #121212;
+  background: #4CAF50;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Títulos */
+h2 {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #4CAF50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Habilidades */
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skills-icons i {
+  font-size: 3rem; /* Tamanho dos ícones */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.skills-icons i:hover {
+  transform: scale(1.2); /* Efeito de zoom */
+  color: #ffffff;
+}
+
+/* Projetos */
+/* Seção de Projetos */
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1F1F1F;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.project h3 {
+  color: #4CAF50;
+  font-size: 1.8rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.project p {
+  color: #B0B0B0;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.project ul {
+  color: #E0E0E0;
+  list-style: none;
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+.project ul li {
+  margin-bottom: 8px;
+}
+
+.project ul li strong {
+  color: #4CAF50;
+}
+
+.project a.button {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #4CAF50;
+  color: #121212;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project a.button:hover {
+  background-color: #81C784;
+  transform: scale(1.05);
+}
+
+/* Layout responsivo */
+@media (min-width: 768px) {
+  #projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* Rodapé */
+footer {
+  background: #1F1F1F;
+  color: #9E9E9E;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  animation: fadeIn 2s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .skills-icons {
+    gap: 15px;
+  }
+
+  .project {
+    padding: 20px;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
