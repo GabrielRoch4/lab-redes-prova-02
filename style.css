@@ -76,6 +76,10 @@ nav ul li a:hover {
   animation: fadeIn 1.5s ease;
 }
 
+#about p {
+  text-align: justify;
+}
+
 /* Títulos */
 h2 {
   font-size: 2rem;
@@ -191,6 +195,25 @@ h2::after {
   transition: background-color 0.3s, transform 0.3s;
 }
 
+.project-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.project-links a {
+  font-size: 2rem; /* Tamanho do ícone */
+  color: #E0E0E0;
+  margin: 0 10px; /* Espaçamento entre ícones */
+  transition: color 0.3s, transform 0.3s;
+}
+
+.project-links a:hover {
+  color: #4CAF50; /* Cor ao passar o mouse */
+  transform: scale(1.2); /* Efeito de zoom */
+}
+
+
 .project a.button:hover {
   background-color: #81C784;
   transform: scale(1.05);
@@ -245,16 +268,18 @@ footer {
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -283,3 +308,47 @@ footer {
     transform: translateX(0);
   }
 }
+
+/* Seção de Contatos */
+#contacts {
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #1F1F1F;
+  text-align: center;
+}
+
+#contacts h2 {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#contacts h2::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #4CAF50;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  font-size: 2.5rem; /* Tamanho dos ícones */
+  color: #E0E0E0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #4CAF50; /* Cor ao passar o mouse */
+  transform: scale(1.2); /* Efeito de zoom */
+}
+
